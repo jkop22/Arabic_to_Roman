@@ -1,0 +1,30 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: url("img/background.jpg") no-repeat center/cover fixed;
+  font-family: "Cinzel", serif;
+  color: whitesmoke;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p {
+  width: 500px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  color: black;
+}
