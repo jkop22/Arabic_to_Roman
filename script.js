@@ -4,13 +4,21 @@ const inputEl = document.querySelector("#number");
 const submitBtn = document.querySelector("#convert-btn");
 const resultEl = document.querySelector("#output");
 
-submitBtn.addEventListener("click", (e) => {
+const checkInput = () => {
   const decNum = Number(inputEl.value);
   if (!decNum || isNaN(decNum)) {
     resultEl.innerHTML = "<h2>Please enter a valid number</h2>";
   } else {
     const romNum = arabicToRoman(decNum);
     resultEl.innerHTML = `<h2>${romNum}</h2>`;
+  }
+  inputEl.value = "";
+};
+
+submitBtn.addEventListener("click", checkInput);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    checkInput();
   }
 });
 
